@@ -1,0 +1,28 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Coherent Synchrotron Radiation</title>
+        <link>https://st-walker.github.io/posts/</link>
+        <description>Recent content in Posts on Coherent Synchrotron Radiation</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-GB</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Fri, 03 Sep 2021 16:25:21 +0200</lastBuildDate>
+        <atom:link href="https://st-walker.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Zeuthen Benchmark</title>
+            <link>https://st-walker.github.io/posts/zeuthen-benchmark/</link>
+            <pubDate>Fri, 03 Sep 2021 16:25:21 +0200</pubDate>
+            
+            <guid>https://st-walker.github.io/posts/zeuthen-benchmark/</guid>
+            <description>True Zeuthen benchmark: WITH / WITHOUT SC.
+Relaxed Zeuthen bencharmk (200pC everything else the same)
+quasi-bc1 example (1.4GeV to 2.4kA)</description>
+            <content type="html"><![CDATA[<p>True Zeuthen benchmark: WITH / WITHOUT SC.</p>
+<p>Relaxed Zeuthen bencharmk  (200pC everything else the same)</p>
+<p>quasi-bc1 example (1.4GeV to 2.4kA)</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>
