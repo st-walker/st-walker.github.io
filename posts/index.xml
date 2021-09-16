@@ -6,21 +6,161 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-GB</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 03 Sep 2021 16:25:21 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 16 Sep 2021 13:51:55 +0200</lastBuildDate>
         <atom:link href="https://st-walker.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Zeuthen Benchmark</title>
-            <link>https://st-walker.github.io/posts/zeuthen-benchmark/</link>
-            <pubDate>Fri, 03 Sep 2021 16:25:21 +0200</pubDate>
+            <title>The eSASE chicane and CSR</title>
+            <link>https://st-walker.github.io/posts/benchmarks/esase/</link>
+            <pubDate>Thu, 16 Sep 2021 13:51:55 +0200</pubDate>
             
-            <guid>https://st-walker.github.io/posts/zeuthen-benchmark/</guid>
-            <description>True Zeuthen benchmark: WITH / WITHOUT SC.
-Relaxed Zeuthen bencharmk (200pC everything else the same)
-quasi-bc1 example (1.4GeV to 2.4kA)</description>
-            <content type="html"><![CDATA[<p>True Zeuthen benchmark: WITH / WITHOUT SC.</p>
-<p>Relaxed Zeuthen bencharmk  (200pC everything else the same)</p>
-<p>quasi-bc1 example (1.4GeV to 2.4kA)</p>
+            <guid>https://st-walker.github.io/posts/benchmarks/esase/</guid>
+            <description>Overview A set of benchmarks for the study of the proposed eSASE chicane in the EUXFEL. It is important to understand how the beam may be degrade due CSR in the chicane, and whether or not the optical configuration by introducing β-function waist in the fourth dipole. If CSR degradation in the chicane even with the existing FODO optics is tolerable then all is well.
+The parameters of the chicane and the input beam distribution are as follows:</description>
+            <content type="html"><![CDATA[<h1 id="overview">Overview</h1>
+<p>A set of benchmarks for the study of the proposed eSASE chicane in the EUXFEL.  It is
+important to understand how the beam may be degrade due CSR in the chicane, and whether
+or not the optical configuration by introducing β-function waist in the fourth
+dipole. If CSR degradation in the chicane even with the existing FODO optics is
+tolerable then all is well.</p>
+<p>The parameters of the chicane and the input beam distribution are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Projected drift length 1/2, 3/4</td>
+<td>1</td>
+<td>m</td>
+</tr>
+<tr>
+<td>Drift length 2/3</td>
+<td>0.4</td>
+<td>m</td>
+</tr>
+<tr>
+<td>Dipole length</td>
+<td>0.6</td>
+<td>m</td>
+</tr>
+<tr>
+<td>R<sub>56</sub></td>
+<td>-190.5</td>
+<td>µm</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Beam energy</td>
+<td>14</td>
+<td>GeV</td>
+</tr>
+<tr>
+<td>Linear energy-z correlation (central peak)</td>
+<td>5455</td>
+<td>m<sup>-1</sup></td>
+</tr>
+<tr>
+<td>Average β<sub>x,y</sub></td>
+<td>32</td>
+<td>m</td>
+</tr>
+<tr>
+<td>Initial normalised emittance</td>
+<td>0.6</td>
+<td>µm</td>
+</tr>
+<tr>
+<td>Initial peak current</td>
+<td>5</td>
+<td>kA</td>
+</tr>
+<tr>
+<td>Bunch charge</td>
+<td>250</td>
+<td>pC</td>
+</tr>
+<tr>
+<td>Uncorrelated energy spread</td>
+<td>2.5</td>
+<td>MeV</td>
+</tr>
+</tbody>
+</table>
+<h2 id="initial-distribution">Initial distribution</h2>
+<p>As stated above the intention is to study two sets of optics, standard FODO optics and
+optimised optics.  The FODO optics are shown below.  All simulations below are run using
+these exact optics.  I have yet to do a more optimal one.</p>
+<p><img src="/esase/optics-sub-optimal.pdf" alt="fodo-optics" title="FODO optics in the eSASE chicane"></p>
+<p>The input distribution (without energy modulation) is as follows:</p>
+<p><img src="/esase/esase-primary.pdf" alt="esase-primary" title="Input distribution without chirp"></p>
+<p>The energy modulation with the longitudinal beam profile
+overlaid is shown below.  The width of the central peak&rsquo;s linear part is about 0.2µm,
+giving a linear chirp of about 5455m<sup>-1</sup>.  For maximal compression, this corresponds to
+an R<sub>56</sub> of -1/5455m<sup>-1</sup> = -190.5µm.</p>
+<p><img src="/esase/esase-modulation-with-beam.png" alt="esase-emod" title="Energy modulation"></p>
+<h1 id="tracking-without-any-csr">Tracking without any CSR</h1>
+<p>First it is useful to examine the compression without any collective effects to ensure
+that the beam and chicane are implemented correctly.  Shown below are the beam
+distributions before and after the chicane.  The chicane and the chirp bring the peak
+current to nearly 20kA, as expected.</p>
+<h2 id="ocelot-tracking-without-csr">OCELOT tracking without CSR</h2>
+<p><img src="/esase/ocelot_compared_beams_no_csr.png" alt="esase-no-csr-ocelot" title="OCELOT before and after chicane, no CSR"></p>
+<h2 id="gpt-tracking-without-csr">GPT tracking without CSR</h2>
+<p>HAVE RESULTS BUT NOT ADDED YET</p>
+<h2 id="csrtrack-tracking-without-csr">CSRTrack tracking without CSR</h2>
+<p>HAVE RESULTS BUT NOT ADDED YET</p>
+<h1 id="tracking-with-csr">Tracking with CSR</h1>
+<p>As the chicane and input beam distributions seem to be working correctly, now to include
+CSR effects.</p>
+<h3 id="tuning-simulation-parameters">Tuning simulation parameters</h3>
+<p>In GPT I set the <code>accuracy</code> (number of decimal places in γβ) to 6, which is
+the same as used for the Zeuthen benchmark.</p>
+<p>In OCELOT there are a number that must be adjusted to ensure physical results.  The two
+most pertinent are <code>unit_step</code> of the <code>Navigator</code> class and <code>sigma_min</code> of the <code>CSR</code>
+class.  As I understand it, <code>unit_step</code> must be set sufficiently small to ensure that
+the Navigator doesn&rsquo;t take very large steps (otherwise the backtracking employed when
+calculating the CSR wake will be wrong, as it uses the rigid beam approximation I
+think), and <code>sigma_min</code> must sufficiently small to not smooth out any small details (but
+not so small that one will see artificial microbunching).  The central spike goes down
+to about 100nm in length, so I chose a value of <code>sigma_min</code> of 10nm (one tenth the beam
+size or the length of some feature of interest is the rule of thumb I used).  The
+<code>unit_step</code> I set to 1 cm on the basis of convergence studies I performed for the
+Zeuthen benchmark, but obviously this is a different chicane so this could indeed be
+wrong here.</p>
+<p>For CSRTrack (1D) I used a <code>sigma_long</code> of 10nm, using the same reasoning
+as for <code>sigma_min</code> in OCELOT.  The rest of the CSRTrack tracking configuration:</p>
+<pre><code>  track_step{precondition=yes
+             iterative=2
+             error_per_ct=0.001
+             error_weight_momentum=0.0
+
+             ct_step_min=0.02
+             ct_step_max=0.10
+             ct_step_first=0.10
+             increase_factor=1.5
+             arc_factor=0.3
+             duty_steps=yes
+            }
+</code></pre><h2 id="ocelot-csr">OCELOT CSR</h2>
+<p>No impact on the slice or projected emittances can be seen.  The different post-chicane peak current
+shown here to OCELOT tracking without CSR is generally because the peak current is
+sensitive to the initial seed for some reason.</p>
+<p><img src="/esase/ocelot-before-after-with-csr.png" alt="ocelot-esase-with-csr" title="OCELOT before and after CSR"></p>
+<h2 id="gpt-csr">GPT CSR</h2>
+<p><img src="/esase/gpt-output.pdf" alt="gpt-esase-with-csr" title="GPT before and after CSR"></p>
+<h2 id="csrtrack-csr">CSRTrack CSR</h2>
+<p><img src="/esase/CSRtrack-output.pdf" alt="csrtrack-esase-with-csr" title="CSRTrack befor and after CSR"></p>
+<h1 id="conclusion">Conclusion</h1>
+<p>In spite of what I expected, CSR doesn&rsquo;t seem to matter at all for the eSASE chicane.</p>
 ]]></content>
         </item>
         

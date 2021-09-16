@@ -7,16 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 03 Sep 2021 16:25:21 +0200</lastBuildDate><atom:link href="https://st-walker.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Sep 2021 13:51:55 +0200</lastBuildDate><atom:link href="https://st-walker.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Zeuthen Benchmark</title>
-      <link>https://st-walker.github.io/posts/zeuthen-benchmark/</link>
-      <pubDate>Fri, 03 Sep 2021 16:25:21 +0200</pubDate>
+      <title>The eSASE chicane and CSR</title>
+      <link>https://st-walker.github.io/posts/benchmarks/esase/</link>
+      <pubDate>Thu, 16 Sep 2021 13:51:55 +0200</pubDate>
       
-      <guid>https://st-walker.github.io/posts/zeuthen-benchmark/</guid>
-      <description>True Zeuthen benchmark: WITH / WITHOUT SC.
-Relaxed Zeuthen bencharmk (200pC everything else the same)
-quasi-bc1 example (1.4GeV to 2.4kA)</description>
+      <guid>https://st-walker.github.io/posts/benchmarks/esase/</guid>
+      <description>Overview A set of benchmarks for the study of the proposed eSASE chicane in the EUXFEL. It is important to understand how the beam may be degrade due CSR in the chicane, and whether or not the optical configuration by introducing β-function waist in the fourth dipole. If CSR degradation in the chicane even with the existing FODO optics is tolerable then all is well.
+The parameters of the chicane and the input beam distribution are as follows:</description>
     </item>
     
   </channel>
