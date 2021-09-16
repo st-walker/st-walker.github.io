@@ -114,9 +114,15 @@ distributions before and after the chicane.  The chicane and the chirp bring the
 current to nearly 20kA, as expected.</p>
 <h2 id="ocelot-tracking-without-csr">OCELOT tracking without CSR</h2>
 <p><img src="/esase/ocelot_compared_beams_no_csr.png" alt="esase-no-csr-ocelot" title="OCELOT before and after chicane, no CSR"></p>
-<h2 id="gpt-tracking-without-csr">GPT tracking without CSR</h2>
-<p>HAVE RESULTS BUT NOT ADDED YET</p>
-<h2 id="csrtrack-tracking-without-csr">CSRTrack tracking without CSR</h2>
+<h1 id="tracking-with-csr-but-without-energy-modulation">Tracking with CSR but without energy modulation</h1>
+<p>To simply study the impact of CSR on a bunch of this length in the given chicane, I
+simulated without any compression.  There is a slight deformation in the bunch slice
+positions shown in the top right, but no growth in the slice or projected emittances at
+all.</p>
+<h2 id="gpt-with-csr-no-energy-modulation">GPT with CSR, no energy modulation</h2>
+<p><img src="/esase/gpt-output-csr-without-chirp.pdf" alt="esase-no-csr-gpt"></p>
+<p>! ## CSRTrack with CSR, no energy modulation
+! <img src="/esase/gpt-output-csr-without-chirp.pdf" alt="esase-no-csr-gpt"></p>
 <p>HAVE RESULTS BUT NOT ADDED YET</p>
 <h1 id="tracking-with-csr">Tracking with CSR</h1>
 <p>As the chicane and input beam distributions seem to be working correctly, now to include
@@ -160,7 +166,8 @@ sensitive to the initial seed for some reason.</p>
 <h2 id="csrtrack-csr">CSRTrack CSR</h2>
 <p><img src="/esase/CSRtrack-output.pdf" alt="csrtrack-esase-with-csr" title="CSRTrack befor and after CSR"></p>
 <h1 id="conclusion">Conclusion</h1>
-<p>In spite of what I expected, CSR doesn&rsquo;t seem to matter at all for the eSASE chicane.</p>
+<p>Contrary to my own expectations, CSR seems to have little impact on the slice and
+projected emittances.</p>
 ]]></content>
         </item>
         
