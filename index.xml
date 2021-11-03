@@ -7,18 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 21 Sep 2021 10:33:58 +0200</lastBuildDate><atom:link href="https://st-walker.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Gpt Csrtrack Ocelot</title>
-      <link>https://st-walker.github.io/posts/benchmarks/gpt-csrtrack-ocelot/</link>
-      <pubDate>Tue, 21 Sep 2021 10:33:58 +0200</pubDate>
-      
-      <guid>https://st-walker.github.io/posts/benchmarks/gpt-csrtrack-ocelot/</guid>
-      <description>Overview Here I am going to compare CSRTRack, OCELOT and GPT with application to CSR simulations in bunch compressors.
-The Zeuthen Benchmark Chicane The Zeuthen chicane is the standard chicane used in the literature when evaluting different CSR codes, and is accordingly used here. The chicane and beam parameters parameters are below. The chicane parameters are a subset of the ones on the website
-The beam parmaters (with compression) are the same as the ones outlined on the website except with a reduced energy from 5GeV to 0.</description>
-    </item>
-    
+    <lastBuildDate>Thu, 16 Sep 2021 13:51:55 +0200</lastBuildDate><atom:link href="https://st-walker.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The eSASE chicane and CSR</title>
       <link>https://st-walker.github.io/posts/benchmarks/esase/</link>
@@ -27,17 +16,6 @@ The beam parmaters (with compression) are the same as the ones outlined on the w
       <guid>https://st-walker.github.io/posts/benchmarks/esase/</guid>
       <description>Overview A set of benchmarks for the study of the proposed eSASE chicane in the EUXFEL. It is important to understand how the beam may be degrade due CSR in the chicane, and whether or not the optical configuration by introducing β-function waist in the fourth dipole. If CSR degradation in the chicane even with the existing FODO optics is tolerable then all is well.
 The parameters of the chicane and the input beam distribution are as follows:</description>
-    </item>
-    
-    <item>
-      <title>Zeuthen Benchmark</title>
-      <link>https://st-walker.github.io/posts/benchmarks/zeuthen-benchmark/</link>
-      <pubDate>Fri, 03 Sep 2021 16:25:21 +0200</pubDate>
-      
-      <guid>https://st-walker.github.io/posts/benchmarks/zeuthen-benchmark/</guid>
-      <description>True Zeuthen benchmark: WITH / WITHOUT SC.
-Relaxed Zeuthen bencharmk (200pC everything else the same)
-quasi-bc1 example (1.4GeV to 2.4kA)</description>
     </item>
     
   </channel>

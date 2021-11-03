@@ -6,172 +6,8 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-GB</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 21 Sep 2021 10:33:58 +0200</lastBuildDate>
+        <lastBuildDate>Thu, 16 Sep 2021 13:51:55 +0200</lastBuildDate>
         <atom:link href="https://st-walker.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-        
-        <item>
-            <title>Gpt Csrtrack Ocelot</title>
-            <link>https://st-walker.github.io/posts/benchmarks/gpt-csrtrack-ocelot/</link>
-            <pubDate>Tue, 21 Sep 2021 10:33:58 +0200</pubDate>
-            
-            <guid>https://st-walker.github.io/posts/benchmarks/gpt-csrtrack-ocelot/</guid>
-            <description>Overview Here I am going to compare CSRTRack, OCELOT and GPT with application to CSR simulations in bunch compressors.
-The Zeuthen Benchmark Chicane The Zeuthen chicane is the standard chicane used in the literature when evaluting different CSR codes, and is accordingly used here. The chicane and beam parameters parameters are below. The chicane parameters are a subset of the ones on the website
-The beam parmaters (with compression) are the same as the ones outlined on the website except with a reduced energy from 5GeV to 0.</description>
-            <content type="html"><![CDATA[<h1 id="overview">Overview</h1>
-<p>Here I am going to compare CSRTRack, OCELOT and GPT with application to CSR simulations
-in bunch compressors.</p>
-<h1 id="the-zeuthen-benchmark-chicane">The Zeuthen Benchmark Chicane</h1>
-<p>The <a href="https://www.desy.de/csr/">Zeuthen chicane</a> is the standard chicane used in the
-literature when evaluting different CSR codes, and is accordingly used here.  The
-chicane and beam parameters parameters are below.  The chicane parameters are a subset
-of the ones on the website</p>
-<p>The beam parmaters (with compression) are the same as the ones outlined on the website
-except with a reduced energy from 5GeV to 0.5GeV, motivated by a desire to possibly
-demonstrate any non-radiative CSR effects.  Furthermore, the simulation excludes any
-longitudinal charge density modulation, as well as the uncorrelated energy spread
-being set to 10keV.  The phase space for this input distribution is shown as well.</p>
-<table>
-<tr><th>Zeuthen chicane parameters </th><th>Zeuthen beam parameters</th></tr>
-<tr><td>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Value</th>
-<th>Unit</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Projected drift length 1/2, 3/4</td>
-<td>5.0</td>
-<td>m</td>
-</tr>
-<tr>
-<td>Drift length 2/3</td>
-<td>1.0</td>
-<td>m</td>
-</tr>
-<tr>
-<td>Dipole length</td>
-<td>0.5</td>
-<td>m</td>
-</tr>
-<tr>
-<td>Post chicane drift</td>
-<td>2.0</td>
-<td>m</td>
-</tr>
-<tr>
-<td>Total projected length</td>
-<td>13.0</td>
-<td>m</td>
-</tr>
-<tr>
-<td>R<sub>56</sub></td>
-<td>-25</td>
-<td>mm</td>
-</tr>
-<tr>
-<td>T<sub>566</sub></td>
-<td>+37.5</td>
-<td>mm</td>
-</tr>
-<tr>
-<td>Bending angle</td>
-<td>2.77</td>
-<td>°</td>
-</tr>
-<tr>
-<td>Bending radius</td>
-<td>10.35</td>
-<td>m</td>
-</tr>
-<tr>
-<td>Vertical halfgap of dipoles</td>
-<td>5</td>
-<td>mm</td>
-</tr>
-</tbody>
-</table>
-</td><td>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Value</th>
-<th>Unit</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Beam energy</td>
-<td>0.5</td>
-<td>GeV</td>
-</tr>
-<tr>
-<td>Linear energy-z correlation</td>
-<td>36</td>
-<td>m<sup>-1</sup></td>
-</tr>
-<tr>
-<td>Normalised emittance</td>
-<td>1.0</td>
-<td>mm·mrad</td>
-</tr>
-<tr>
-<td>Bunch length</td>
-<td>200</td>
-<td>μm</td>
-</tr>
-<tr>
-<td>Peak current</td>
-<td>0.6</td>
-<td>kA</td>
-</tr>
-<tr>
-<td>Bunch charge</td>
-<td>1</td>
-<td>nC</td>
-</tr>
-<tr>
-<td>Uncorrelated energy spread</td>
-<td>10</td>
-<td>keV</td>
-</tr>
-<tr>
-<td>β<sub>x,y</sub></td>
-<td>40, 13</td>
-<td>m</td>
-</tr>
-<tr>
-<td>α<sub>x,y</sub></td>
-<td>2.6, 1.0</td>
-<td>m</td>
-</tr>
-</tbody>
-</table>
-</td></tr> </table>
-<p><img src="/gpt/zeuthen-primary.pdf" alt="input-distro" title="Input beam distribution for nominal Zeuthen"></p>
-<p>The increase in the slice energy spread at the tails of the distribution is wsimply an
-artefact of the algorithm used to calculate it.  The algorithm proceeds by accumulating
-N macroparticles per slice.  At the tails the number of macroparticles is small compared
-to N, so the slice is relatively long in z, resulting in the slice energy spread being
-dominated by the linear chirp, and rises accordingly..  This is a common feature in
-plots that follow. Lastly the distributions are started 10cm upstream of the first
-dipole entrance to ensure no spurious dispersion from the bunch overlapping with the fringe
-fields.</p>
-<h1 id="optical-tracking-without-collective-effects">Optical tracking without collective effects</h1>
-<p>This is necessary as a sanity check before further more time-consuming simulations.
-CSRTrack, OCELOT and GPT for the Zeuthen benchmark are all run without any collective
-effects.</p>
-<h1 id="input-distributions">Input distributions</h1>
-<p>The distribution for the Zeuthen benchmark is shown bel</p>
-<h2 id="csr-use-case-1">CSR use case 1</h2>
-<h2 id="heading"></h2>
-]]></content>
-        </item>
         
         <item>
             <title>The eSASE chicane and CSR</title>
@@ -372,26 +208,16 @@ due to the high energy and low bending radius.  Finally</p>
 <p><img src="/esase/esase-200-um-max-compression.gif" alt="ocelot-esase-max-compression-animation"></p>
 <p>In contrast, for 0.05 radians (comparable to BC1/2), but also featuring overcompression:</p>
 <p><img src="/esase/bigger-angle-compression.gif" alt="ocelot-esase-max-compression-animation"></p>
-<p>Also plot the dispersion.</p>
-<p>! # Conclusion</p>
-<p>! Contrary to my own expectations, CSR seems to have little impact on the projected or
-! slice emittances.  This is most likely due to the minimal longitudinal mixing,
-! ultimately stemming from the small bending angle and smaller geometric emittance.</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Zeuthen Benchmark</title>
-            <link>https://st-walker.github.io/posts/benchmarks/zeuthen-benchmark/</link>
-            <pubDate>Fri, 03 Sep 2021 16:25:21 +0200</pubDate>
-            
-            <guid>https://st-walker.github.io/posts/benchmarks/zeuthen-benchmark/</guid>
-            <description>True Zeuthen benchmark: WITH / WITHOUT SC.
-Relaxed Zeuthen bencharmk (200pC everything else the same)
-quasi-bc1 example (1.4GeV to 2.4kA)</description>
-            <content type="html"><![CDATA[<p>True Zeuthen benchmark: WITH / WITHOUT SC.</p>
-<p>Relaxed Zeuthen bencharmk  (200pC everything else the same)</p>
-<p>quasi-bc1 example (1.4GeV to 2.4kA)</p>
+<p>! Conclusion</p>
+<p>CSR can be seen not to have a sizeable impact for the eSASE chicane.  This is ultimately
+due to the small angle of the chicane bends.  Firstly, this small angle leads to both a
+relatively long overtaking length (beyond the length of a single dipole) so that the
+steady-state CSR regime is never reached (i.e. mostly only transient effects).  Secondly
+the small angle gives a small dispersion in the chicane, so that any induced wake along
+the length of the bunch is only marginally translated to a shift in the slice positions
+along the bunch.  Therefore the projected emittance does not change.  The dispersion
+effect likely dominates over the CSR one as one can see above that even close to the
+overtaking length that the projected emittance does not change.</p>
 ]]></content>
         </item>
         
