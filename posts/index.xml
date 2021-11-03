@@ -54,6 +54,16 @@ tolerable then all is well.</p>
 <td>µm</td>
 </tr>
 <tr>
+<td>Bending angle</td>
+<td>0.47</td>
+<td>°</td>
+</tr>
+<tr>
+<td>Bending radius</td>
+<td>72.72</td>
+<td>m</td>
+</tr>
+<tr>
 <td></td>
 <td></td>
 <td></td>
@@ -100,6 +110,16 @@ tolerable then all is well.</p>
 optimised optics.  The FODO optics are shown below.  All simulations below are run using
 these exact optics.  I have yet to do a more optimal one.</p>
 <p><img src="/esase/optics-sub-optimal.pdf" alt="fodo-optics" title="FODO optics in the eSASE chicane"></p>
+<p>The projected slice lengths for this configuration are below, and it can be seen that
+the projected slice lengths are small compared with the bunch length above (~20µm).  The
+projected lengths were derived using the equation stated in <a href="https://www.desy.de/fel-beam/data/talks/papers/impact_of_optics_2005.pdf">this
+paper</a>.  The
+waist s<sub>w</sub> is equal to 0 in this configuration, leading to a relation that is
+dominated by the R<sub>51</sub> due to the small angle (R<sub>56</sub>), which is
+equivalent in magnitude on both sides of the chicane.  The acumulated R<sub>51</sub> and
+R<sub>52</sub> through the chicane are shown.  However the lengths are comparable in
+length to that of the final eSASE spike (100nm).</p>
+<p><img src="/esase/sigma_proj-r51-r52.pdf" alt="projected-slice-length"></p>
 <p>The input distribution (without energy modulation) is as follows:</p>
 <p><img src="/esase/esase-primary.pdf" alt="esase-primary" title="Input distribution without chirp"></p>
 <p>The energy modulation with the longitudinal beam profile
@@ -121,9 +141,8 @@ positions shown in the top right, but no growth in the slice or projected emitta
 all.</p>
 <h2 id="gpt-with-csr-no-energy-modulation">GPT with CSR, no energy modulation</h2>
 <p><img src="/esase/gpt-output-csr-without-chirp.pdf" alt="esase-no-csr-gpt"></p>
-<p>! ## CSRTrack with CSR, no energy modulation
-! <img src="/esase/gpt-output-csr-without-chirp.pdf" alt="esase-no-csr-gpt"></p>
-<p>HAVE RESULTS BUT NOT ADDED YET</p>
+<h2 id="csrtrack-with-csr-no-energy-modulation">CSRTrack with CSR, no energy modulation</h2>
+<p><img src="/esase/csrtrack-output-csr-without-chirp.pdf" alt="esase-no-csr-gpt"></p>
 <h1 id="tracking-with-csr">Tracking with CSR</h1>
 <p>As the chicane and input beam distributions seem to be working correctly, now to include
 CSR effects.</p>
@@ -144,7 +163,7 @@ Zeuthen benchmark, but obviously this is a different chicane so this could indee
 wrong here.</p>
 <p>For CSRTrack (1D) I used a <code>sigma_long</code> of 10nm, using the same reasoning
 as for <code>sigma_min</code> in OCELOT.  The rest of the CSRTrack tracking configuration:</p>
-<pre><code>  track_step{precondition=yes
+<pre tabindex="0"><code>  track_step{precondition=yes
              iterative=2
              error_per_ct=0.001
              error_weight_momentum=0.0
@@ -166,8 +185,9 @@ sensitive to the initial seed for some reason.</p>
 <h2 id="csrtrack-csr">CSRTrack CSR</h2>
 <p><img src="/esase/CSRtrack-output.pdf" alt="csrtrack-esase-with-csr" title="CSRTrack befor and after CSR"></p>
 <h1 id="conclusion">Conclusion</h1>
-<p>Contrary to my own expectations, CSR seems to have little impact on the slice and
-projected emittances.</p>
+<p>Contrary to my own expectations, CSR seems to have little impact on the projected or
+slice emittances.  This is most likely due to the minimal longitudinal mixing,
+ultimately stemming from the small bending angle and smaller geometric emittance.</p>
 ]]></content>
         </item>
         

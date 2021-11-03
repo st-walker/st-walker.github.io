@@ -10,10 +10,10 @@
     <lastBuildDate>Fri, 03 Sep 2021 16:25:21 +0200</lastBuildDate><atom:link href="https://st-walker.github.io/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Zeuthen Benchmark</title>
-      <link>https://st-walker.github.io/posts/zeuthen-benchmark/</link>
+      <link>https://st-walker.github.io/posts/benchmarks/zeuthen-benchmark/</link>
       <pubDate>Fri, 03 Sep 2021 16:25:21 +0200</pubDate>
       
-      <guid>https://st-walker.github.io/posts/zeuthen-benchmark/</guid>
+      <guid>https://st-walker.github.io/posts/benchmarks/zeuthen-benchmark/</guid>
       <description>True Zeuthen benchmark: WITH / WITHOUT SC.
 Relaxed Zeuthen bencharmk (200pC everything else the same)
 quasi-bc1 example (1.4GeV to 2.4kA)</description>
